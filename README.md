@@ -1,11 +1,11 @@
-About stac-check
-================
+About stac-check-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/stac-check-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/stac-utils/stac-check
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/stac-check-feedstock/blob/main/LICENSE.txt)
 
 Summary: Linting and validation tool for STAC assets
 
