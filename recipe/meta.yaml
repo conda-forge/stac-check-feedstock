@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/stac_check-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/stac_check-{{ version }}.tar.gz
   sha256: 5bcba6946e02c25ce89f1518701cd4159774b91780109dd37c90b360d3ae7b74
 
 build:
@@ -14,18 +14,18 @@ build:
     - stac-check=stac_check.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - click >=7.1.2
     - jsonschema >=3.1.2b0
     - pystac >=1.1.0
     - pytest
-    - python >=3.7
+    - python >={{ python_min }}
     - python-dotenv
     - pyyaml
     - requests >=2.19.1
@@ -39,6 +39,7 @@ test:
     - stac-check --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/stac-utils/stac-check
